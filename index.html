@@ -1,41 +1,90 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Wxh by Justin-lu</title>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>To 王晓华</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Wxh</h1>
-        <p>a page to my girlfriend</p>
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* We are both Fudan SSers and programmers,</span><br />
+				<span class="space"/><span class="comments">* so I write some code to celebrate our 1st anniversary.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"hackerzhou"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"MaryNee"</span>);<br />
+				<span class="comments">// Nov 2, 2010, I told you I love you. </span><br />
+				i.love(u);<br />
+				<span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
+				u.accepted();<br />
+				<span class="comments">// Since then, I miss u every day.</span><br />
+				i.miss(u);<br />
+				<span class="comments">// And take care of u and our love.</span><br />
+				i.takeCareOf(u);<br />
+				<span class="comments">// You say that you won't be so easy to marry me.</span><br />
+				<span class="comments">// So I keep waiting and I have confidence that you will.</span><br />
+				<span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
+				<span class="keyword">while</span> (isHesitate) {<br />
+				<span class="placeholder"/>i.waitFor(u);<br />
+				<span class="placeholder"/><span class="comments">// I think it is an important decision</span><br />
+				<span class="placeholder"/><span class="comments">// and you should think it over.</span><br />
+				<span class="placeholder"/>isHesitate = u.thinkOver();<br />
+				}<br />
+				<span class="comments">// After a romantic wedding, we will live happily ever after.</span><br />
+				i.marry(u);<br />
+				i.liveHappilyWith(u);<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+          We have fallen in love with each other for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- Justin</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+      Written on 2013-2-14
+      Provider <a href='http://hackerzhou.me'>hackerzhou</a><br />
+      Mender <a href='http://weibo.com/luxiaoyong17'>Justin</a></div> </div>
+  <script type="text/javascript"> var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+    var together = "2013-2-10 22:05:15";
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+    var together = Date.parse("2005-1-10 8:00:00");new Date(2013, 1, 10, 22, 05, 15,0)
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				adjustWordsPosition();
+				startHeartAnimation();
+			}, 5000);
 
-        <p class="view"><a href="https://github.com/Justin-lu/wxh">View the Project on GitHub <small>Justin-lu/wxh</small></a></p>
+			timeElapse(together);
+      console.log(together)
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
 
-
-        <ul>
-          <li><a href="https://github.com/Justin-lu/wxh/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/Justin-lu/wxh/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/Justin-lu/wxh">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p>I will describe it </p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/Justin-lu">Justin-lu</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
 </html>
+>>>>>>> 412bd68ab8244b5ed9771c3b75976e1b261844a3
